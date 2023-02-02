@@ -10,14 +10,21 @@ namespace DownloadFile
         {
             InitializeComponent();
         }
-
+        
+           ##button on windows form
+           
         private void btnDownload_Click(object sender, EventArgs e)
         {
             using (WebClient client = new WebClient())
+           
             {
+                ##link to file & name
+                    
                 client.DownloadFile("http://www.example.com/file.zip", "file.zip");
             }
 
+                ##confirm download message
+                
             MessageBox.Show("Download complete.");
         }
     }
